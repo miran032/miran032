@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import os
 import pandas as pd
 import pickle
 import numpy as np
@@ -6,7 +7,7 @@ import numpy as np
 app = Flask(__name__)
 data = pd.read_csv('Cleaned_Data2.csv')
 pipe = pickle.load(open('RidgeModel.pkl', 'rb'))
-
+port = int(os.environ.get('PORT', 5000))
 
 @app.route('/')
 def index():
@@ -37,4 +38,4 @@ def predict():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=port, debug=True)
