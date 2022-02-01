@@ -12,110 +12,128 @@
 
       <style>
           *{
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-              font-family: 'Poppins',sans-serif;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins',sans-serif;
           }
           body{
-              display: flex;
-              height: 100vh;
-              justify-content: center;
-              align-items: center;
-              padding: 10px;
-              background: linear-gradient(135deg, #394247, #572035);
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                background: linear-gradient(135deg, #394247, #572035);
           }
           .container{
-              max-width: 700px;
-              width: 100%;
-              background: rgb(204, 194, 194);
-              padding: 25px 30px;
-              border-radius: 5px;
+                max-width: 700px;
+                width: 100%;
+                background: rgb(204, 194, 194);
+                padding: 25px 30px;
+                border-radius: 5px;
           }
           .container .title{
-              font-size: 25px;
-              font-weight: bolder;
+                font-size: 25px;
+                font-weight: bolder;
           }
           .container .title::before{
-              content: '';
-              position: absolute;
-              left: 0;
-              bottom: 0;
-              height: 3px;
-              width: 30px;
-              background: linear-gradient(135deg, #394247, #572035);
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 3px;
+                width: 30px;
+                background: linear-gradient(135deg, #394247, #572035);
           }
           .container form .Details{
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: space-between;
-              margin: 20px 0 12px 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin: 20px 0 12px 0;
           }
           form .Details .Menu{
-              margin-bottom: 15px;
-              width: calc(100% / 2 - 20px);
+                margin-bottom: 15px;
+                width: calc(100% / 2 - 20px);
           }
           .Details .Menu .details{
-              display: block;
-              font-weight: bold;
-              margin-bottom: 5px;
+                display: block;
+                font-weight: bold;
+                margin-bottom: 5px;
           }
           .Details .Menu input,
           .Details .Menu select{
-              height: 45px;
-              width: 100%;
-              outline: none;
-              border-radius: 5px;
-              border: 1px solid rgb(204, 194, 194);
-              padding-left: 15px;
-              font-size: 16px;
-              border-bottom-width: 2px;
-              transition: all 0.3s ease;
+                height: 45px;
+                width: 100%;
+                outline: none;
+                border-radius: 5px;
+                border: 1px solid rgb(204, 194, 194);
+                padding-left: 15px;
+                font-size: 16px;
+                border-bottom-width: 2px;
+                transition: all 0.3s ease;
           }
           .Details .Menu input:focus,
           .Details .Menu input:valid{
-              border-color: #643a4f;
+                border-color: #643a4f;
           }
           .Details .Menu select:focus,
           .Details .Menu select:valid{
-              border-color: #643a4f;
+                border-color: #643a4f;
           }
           form .button{
-              height: 45px;
-              margin: 45px 0;
+                height: 45px;
+                margin: 45px 0;
           }
           form .button button{
-              height: 100%;
-              width: 100%;
-              outline: none;
-              color: rgb(204, 194, 194);
-              border: 2px;
-              font-size: 18px;
-              font-weight: bolder;
-              border-radius: 5px;
-              letter-spacing: 1px;
-              background: linear-gradient(135deg, #394247, #572035);
+                height: 100%;
+                width: 100%;
+                outline: none;
+                color: rgb(204, 194, 194);
+                border: 2px;
+                font-size: 18px;
+                font-weight: bolder;
+                border-radius: 5px;
+                letter-spacing: 1px;
+                background: linear-gradient(135deg, #394247, #572035);
           }
           form .button button:hover{
-              background: linear-gradient(-135deg, #394247, #572035);
+                background: linear-gradient(-135deg, #394247, #572035);
           }
           
           @media (max-width: 584px) {
-              .container{
-                  max-width: 100%;
-              }
-              form .Details .Menu{
-                  margin-bottom: 15px;
-                  width: 100%;
-              }
-              .container form .Details{
-                  max-height: 300px;
-                  overflow-y:scroll;
-              }
-              .Details::-webkit-scrollbar{
-                  width: 0;
-              }
+                .container{
+                    max-width: 100%;
+                }
+                form .Details .Menu{
+                    margin-bottom: 15px;
+                    width: 100%;
+                }
+                .container form .Details{
+                    max-height: 300px;
+                    overflow-y:scroll;
+                }
+                .Details::-webkit-scrollbar{
+                    width: 0;
+                }
               
+          }
+          @media (prefers-color-scheme: dark) {
+                .container{
+                    background: rgb(34, 33, 33);
+                }
+                .container .title{
+                    color: rgb(207, 198, 198);
+                    
+                }
+                form .button button{
+                    background: linear-gradient(135deg, #394247, #572035);
+                    color: rgb(207, 198, 198);
+                }
+                .details{
+                    color: rgb(207, 198, 198);
+
+                }
+
           }
 
       </style>
